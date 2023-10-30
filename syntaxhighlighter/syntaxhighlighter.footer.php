@@ -9,16 +9,11 @@ Hooks=footer.first
  * SyntaxHighlighter connector for Cotonti
  *
  * @package syntaxhighligther
- * @version 1.0
- * @author Trustmaster
- * @copyright Copyright (c) Cotonti Team 2011
- * @license BSD
  */
 
 defined('COT_CODE') or die('Wrong URL');
 
-$shTheme = $cfg['plugin']['syntaxhighlighter']['theme'];
-$shTheme = $shTheme ? $shTheme : 'Default';
+$shTheme = !empty(Cot::$cfg['plugin']['syntaxhighlighter']['theme']) ? Cot::$cfg['plugin']['syntaxhighlighter']['theme'] : 'default';
 
 /**
  * Returns full path to theme css file
@@ -27,23 +22,62 @@ $shTheme = $shTheme ? $shTheme : 'Default';
  * @param string $chTheme Theme name (without prefix)
  * @return string Full path to theme css file
  */
-function shl_cssname($chTheme = 'Default')
+function shlThemeCssUrl($chTheme = 'default')
 {
-	global $cfg, $theme;
-	$cssfile = $cfg['themes_dir'] . '/' . $theme . '/styles/shCore' . $chTheme . '.css';
-	if (is_file($cssfile)) return $cssfile;
-	$cssfile = $cfg['plugins_dir'] . '/syntaxhighlighter/lib/styles/shCore' . $chTheme . '.css';
-	if (is_file($cssfile)) return $cssfile;
-	return $cfg['plugins_dir'] . '/syntaxhighlighter/lib/styles/shCoreDefault.css';;
+	$cssFile = Cot::$cfg['themes_dir'] . '/' . Cot::$cfg['defaulttheme'] . '/styles/syntaxhighlighter-' . $chTheme . '.css';
+	if (is_file($cssFile)) {
+        return $cssFile;
+    }
+
+    $cssFile = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/theme-' . $chTheme . '.css';
+	if (is_file($cssFile)) {
+        return $cssFile;
+    }
+	return Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/theme-default.css';
 }
 
-$sh_core_css = cot_rc('code_rc_css_file', array(
-	'url' => shl_cssname($shTheme)
-));
-$sh_core_js = $cfg['plugins_dir'] . '/syntaxhighlighter/lib/scripts/shAll.min.js';
+$shThemeUrl = shlThemeCssUrl($shTheme);
+$shCoreJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/syntaxhighlighter.js';
 
-cot_rc_embed_footer(<<<JS
-$(function(){if($('pre').length>0){ $('head').append('$sh_core_css');var sh_e1=document.createElement('script');sh_e1.async=true;sh_e1.src ='$sh_core_js';$('body').append(sh_e1);}});
+$shAutoLinks = (bool) Cot::$cfg['plugin']['syntaxhighlighter']['autoLinks'];
+$shAutoLinks = $shAutoLinks ? 'true' : 'false';
+
+$shClassName = !empty(Cot::$cfg['plugin']['syntaxhighlighter']['className'])
+    ? "'" . Cot::$cfg['plugin']['syntaxhighlighter']['className'] . "'"
+    : 'null';
+
+$shGutter = (bool) Cot::$cfg['plugin']['syntaxhighlighter']['gutter'];
+$shGutter = $shGutter ? 'true' : 'false';
+
+$shSmartTabs = (bool) Cot::$cfg['plugin']['syntaxhighlighter']['smartTabs'];
+$shSmartTabs = $shSmartTabs ? 'true' : 'false';
+
+$shTabSize = !empty(Cot::$cfg['plugin']['syntaxhighlighter']['tabSize']) ? (int) Cot::$cfg['plugin']['syntaxhighlighter']['tabSize'] : 4;
+
+Resources::embedFooter(<<<JS
+if (document.querySelector('pre[class*="brush"]') !== null) {
+    let head  = document.getElementsByTagName('head')[0];
+    ['{$shThemeUrl}', 'plugins/syntaxhighlighter/lib/override.css'].forEach((item) => {
+        let shLink = document.createElement('link');
+        shLink.rel  = 'stylesheet';
+        shLink.type = 'text/css';
+        shLink.href = item;
+        head.appendChild(shLink);
+    }); 
+    
+    let shScript = document.createElement('script');
+    shScript.async = true;
+    shScript.src ='$shCoreJs';
+    document.body.appendChild(shScript);
+    
+    syntaxhighlighterConfig = {
+        autoLinks: {$shAutoLinks},
+        className: {$shClassName},
+        gutter: {$shGutter},
+        smartTabs: {$shSmartTabs},
+        tabSize: {$shTabSize}
+    };
+}
 JS
 );
 
