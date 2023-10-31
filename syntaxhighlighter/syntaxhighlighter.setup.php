@@ -39,6 +39,16 @@ tabSize=06:string::4:Tab size
  * @copyright 2023 Alexey Kalnov, Lily Software https://lily-software.com
  *
  * https://github.com/syntaxhighlighter/syntaxhighlighter
+ *
+ * Custom brushes
+ * https://github.com/aerodynamica/brush-halcon,halcon,brush.js
+ * https://github.com/nu-soft/brush-IEC61131,IEC61131,brush.js
+ * https://github.com/ethauvin/brush-kotlin,kotlin,brush.js
+ * https://github.com/ErikWegner/brush-latex,latex,brush.js
+ * https://github.com/p--q/brush-Makefile,Makefile,brush.js
+ * https://github.com/npedotnet/syntaxhighlighter-brush-mel,mel,brush.js
+ * https://github.com/dingxin/brush-objective-c,objective-c,brush.js
+ * https://github.com/ErikWegner/brush-yaml,yaml,brush.js
  */
 
 defined('COT_CODE') or die('Wrong URL');
