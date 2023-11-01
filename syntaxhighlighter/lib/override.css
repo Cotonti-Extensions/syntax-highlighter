@@ -17,7 +17,39 @@
 /*    overflow-y: hidden !important;*/
 /*}*/
 
+.syntaxhighlighter {
+    position: relative;
+}
+
 /* Fix underscores not showing ; https://github.com/syntaxhighlighter/syntaxhighlighter/issues/406*/
 .syntaxhighlighter table td.code .container {
     padding-bottom: 2px !important;
 }
+
+.syntaxhighlighter::before {
+    color: #CCC;
+    /*font-family: arial, sans-serif;*/
+    font-size: 1.1em;
+    /*font-style: italic;*/
+    position: absolute;
+    right: 7px;
+    top: 12px;
+    z-index: 10;
+}
+
+.syntaxhighlighter.bash::before {content: "Bash (Shell)";}
+.syntaxhighlighter.css::before {content: "CSS";}
+.syntaxhighlighter.cpp::before {content: "C++";}
+.syntaxhighlighter.csharp::before {content: "C#";}
+.syntaxhighlighter.delphi::before {content: "Delphi";}
+.syntaxhighlighter.html::before {content: "HTML";}
+.syntaxhighlighter.java::before {content: "Java";}
+.syntaxhighlighter.jscript::before {content: "JavaScript";}
+.syntaxhighlighter.perl::before {content: "Perl";}
+.syntaxhighlighter.php::before {content: "PHP";}
+.syntaxhighlighter.python::before {content: "Python";}
+.syntaxhighlighter.ruby::before {content: "Ruby";}
+.syntaxhighlighter.scss::before {content: "Saas/Scss";}
+.syntaxhighlighter.sql::before {content: "SQL";}
+.syntaxhighlighter.ts::before {content: "TypeScript";}
+.syntaxhighlighter.xml::before {content: "XML/XHTML";}
