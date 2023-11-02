@@ -41,3 +41,9 @@ File name shoud have prefix `syntaxhighlighter-`. For example custom theme file 
 Now you can change it for your needs or create your own. All CSS files located in `themes/theme-name/styles` folder
 override default ones with same names.
 
+## Examples
+
+<img width="640" alt="SyntaxHighlighter" src="https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/5c5e83ff-699d-4228-b13b-0eddc336038f">
+
+
+![SyntaxHighlighter_theme-cotonti](https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/1d09bca1-618c-49bd-a47f-d5160e04bc88)
