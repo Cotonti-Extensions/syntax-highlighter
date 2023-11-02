@@ -44,6 +44,8 @@ override default ones with same names.
 
 ## Examples
 
+Default theme:  
 <img width="640" alt="SyntaxHighlighter" src="https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/5c5e83ff-699d-4228-b13b-0eddc336038f">
 
+Cotonti theme:  
 ![SyntaxHighlighter_theme-cotonti-1](https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/9d9dcc26-05dc-41f9-a833-88b144d70a71)
