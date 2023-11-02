@@ -10,6 +10,8 @@ Authors:
 - Cotonti plugin: [Vladimir Sibirov](https://github.com/trustmaster) ([Trustmaster](https://www.cotonti.com/users/Trustmaster))
 - Cotonti plugin: [Alexey Kalnov](https://github.com/Alex300) ([Alex300](https://www.cotonti.com/users/Alex300))
 - Cotonti color theme: [Andrey Matsovkin](https://github.com/macik), ([Macik](https://www.cotonti.com/users/Macik))
+
+Plugin page: https://www.cotonti.com/extensions/editor-parser/syntax-highlighter
    
 ## Installation
 
