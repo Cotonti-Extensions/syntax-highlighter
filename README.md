@@ -9,6 +9,7 @@ Authors:
 - SyntaxHighlighter: [Alex Gorbatchev](https://github.com/alexgorbatchev)
 - Cotonti plugin: [Vladimir Sibirov](https://github.com/trustmaster) ([Trustmaster](https://www.cotonti.com/users/Trustmaster))
 - Cotonti plugin: [Alexey Kalnov](https://github.com/Alex300) ([Alex300](https://www.cotonti.com/users/Alex300))
+- Cotonti color theme: [Andrey Matsovkin](https://github.com/macik), ([Macik](https://www.cotonti.com/users/Macik))
    
 ## Installation
 
@@ -45,5 +46,4 @@ override default ones with same names.
 
 <img width="640" alt="SyntaxHighlighter" src="https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/5c5e83ff-699d-4228-b13b-0eddc336038f">
 
-
-![SyntaxHighlighter_theme-cotonti](https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/1d09bca1-618c-49bd-a47f-d5160e04bc88)
+![SyntaxHighlighter_theme-cotonti-1](https://github.com/Cotonti-Extensions/syntax-highlighter/assets/1021886/9d9dcc26-05dc-41f9-a833-88b144d70a71)
