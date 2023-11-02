@@ -28,7 +28,7 @@ Your code here
 ```
 
 The list of available brushes and themes: 
-[http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/](https://github.com/syntaxhighlighter/syntaxhighlighter/wiki/Brushes-and-Themes)
+https://github.com/syntaxhighlighter/syntaxhighlighter/wiki/Brushes-and-Themes
 
 Plugin for CKEditor: https://ckeditor.com/cke4/addon/syntaxhighlight, https://github.com/dbrain/ckeditor-syntaxhighlight
 
