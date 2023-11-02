@@ -35,9 +35,9 @@ Plugin for CKEditor: https://ckeditor.com/cke4/addon/syntaxhighlight, https://gi
 
 Plugin bundled with a pack of [predefined color themes](https://github.com/syntaxhighlighter/syntaxhighlighter/wiki/Brushes-and-Themes#official-themes).
 But you can adjust some of it to suit you needs with Cotonti theme colors. To do that copy theme CSS file from
-`syntaxhighlighter/lib/styles` folder to your theme sub folder named `styles` — `themes/themename/styles`.
+`syntaxhighlighter/lib/` folder to your theme sub folder named `styles` — `themes/theme-name/styles`.
 File name shoud have prefix `syntaxhighlighter-`. For example custom theme file full name can be like this: 
-`themes/themename/styles/syntaxhighlighter-my-awesome-theme.css`.  
-Now you can change it for your needs or create your own. All CSS files located in `themes/themename/styles` folder
+`themes/theme-name/styles/syntaxhighlighter-my-awesome-theme.css`.  
+Now you can change it for your needs or create your own. All CSS files located in `themes/theme-name/styles` folder
 override default ones with same names.
 
