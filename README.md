@@ -3,7 +3,7 @@ Syntax Highlighter
 
 Plugin for [Cotonti](https://www.cotonti.com) CMF. Client side code highlighter
 This is ready-to-use Cotonti port of 
-[SyntaxHighligher](https://github.com/syntaxhighlighter/syntaxhighlighter) by Alex Gorbatchev.
+[SyntaxHighlighter](https://github.com/syntaxhighlighter/syntaxhighlighter) by Alex Gorbatchev.
 
 Authors: 
 - SyntaxHighlighter: [Alex Gorbatchev](https://github.com/alexgorbatchev)
