@@ -1,7 +1,11 @@
-Syntaxhighlighter
+Syntaxhig Hlighter
+=================
 
-This is ready-to-use Cotonti port of SyntaxHighligher by Alex Gorbatchev.
-http://alexgorbatchev.com/SyntaxHighlighter/
+Plugin for [Cotonti](https://www.cotonti.com) CMF. Client side code highlighter
+This is ready-to-use Cotonti port of 
+[SyntaxHighligher](https://github.com/syntaxhighlighter/syntaxhighlighter) by Alex Gorbatchev.
+
+Authors:
 
 ## Installation
 
