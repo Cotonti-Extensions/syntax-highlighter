@@ -1,5 +1,5 @@
-Syntaxhig Hlighter
-=================
+Syntax Hlighter
+===============
 
 Plugin for [Cotonti](https://www.cotonti.com) CMF. Client side code highlighter
 This is ready-to-use Cotonti port of 
