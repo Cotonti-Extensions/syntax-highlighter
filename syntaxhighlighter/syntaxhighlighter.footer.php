@@ -38,6 +38,7 @@ function shlThemeCssUrl($chTheme = 'default')
 
 $shThemeUrl = shlThemeCssUrl($shTheme);
 $shCoreJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/syntaxhighlighter.js';
+$prepareJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/js/prepare.js';
 
 $shAutoLinks = (bool) Cot::$cfg['plugin']['syntaxhighlighter']['autoLinks'];
 $shAutoLinks = $shAutoLinks ? 'true' : 'false';
@@ -55,7 +56,8 @@ $shSmartTabs = $shSmartTabs ? 'true' : 'false';
 $shTabSize = !empty(Cot::$cfg['plugin']['syntaxhighlighter']['tabSize']) ? (int) Cot::$cfg['plugin']['syntaxhighlighter']['tabSize'] : 4;
 
 Resources::embedFooter(<<<JS
-if (document.querySelector('pre[class*="brush"]') !== null) {
+let codeBlocks = document.querySelectorAll('pre[class*="brush"]');
+if (codeBlocks.length > 0) {
     let head  = document.getElementsByTagName('head')[0];
     ['{$shThemeUrl}', 'plugins/syntaxhighlighter/lib/override.css'].forEach((item) => {
         let shLink = document.createElement('link');
@@ -65,11 +67,15 @@ if (document.querySelector('pre[class*="brush"]') !== null) {
         head.appendChild(shLink);
     }); 
     
-    let shScript = document.createElement('script');
-    shScript.async = true;
-    shScript.src ='$shCoreJs';
-    document.body.appendChild(shScript);
-    
+    shPrepareConfig = {
+        theme: '$shTheme',
+        coreScript: '$shCoreJs'
+    };
+    let prepareScript = document.createElement('script');
+    prepareScript.async = true;
+    prepareScript.src ='$prepareJs';
+    document.body.appendChild(prepareScript);
+        
     syntaxhighlighterConfig = {
         autoLinks: {$shAutoLinks},
         className: {$shClassName},

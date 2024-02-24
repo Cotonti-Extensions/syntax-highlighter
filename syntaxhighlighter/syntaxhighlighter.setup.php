@@ -4,8 +4,8 @@
 Code=syntaxhighlighter
 Name=Syntax Highlighter
 Description=Client side code highlighter
-Version=1.3.0-4.0.1
-Date=2023-10-30
+Version=1.3.1-4.0.1
+Date=2024-02-24
 Author=Alex Gorbatchev https://github.com/alexgorbatchev, Vladimir Sibirov (Trustmaster), https://github.com/trustmaster, Alexey Kalnov https://github.com/Alex300
 Copyright=(c) Alex Gorbatchev, 2011-2015 Vladimir Sibirov,  2023 Lily Software https://lily-software.com
 Notes=

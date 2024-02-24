@@ -4,6 +4,32 @@
  *
  * Cotonti theme for Syntax highlighter by Macik 
  */
+.syntaxhighlighter-container {
+	border-left: 4px solid #558ABB;
+	background: #fafafa url(../img/code-blueprint.png) repeat left top !important;
+}
+
+.syntaxhighlighter-toolbar {
+	padding: 4px 4px 2px 4px;
+	border-bottom: #e5e5e5 1px solid;
+	background-color: #f3f3f3;
+	color: #bebebe !important;
+	margin-bottom: 5px;
+}
+
+div.syntaxhighlighter {
+	background: transparent !important;
+	width: 100% !important;
+	position: relative !important;
+	overflow: auto !important;
+	font-size: 0.9em !important;
+	padding-bottom: 0;
+}
+
+.syntaxhighlighter {
+	margin: 5px;
+}
+
 .syntaxhighlighter a, 
 .syntaxhighlighter div, 
 .syntaxhighlighter code, 
@@ -43,15 +69,6 @@
 	min-height: auto !important;
 }
 
-div.syntaxhighlighter {
-	width: 100% !important;
-	margin: 1em 0 1em 0 !important;
-	position: relative !important;
-	overflow: auto !important;
-	font-size: 0.9em !important;
-	border-left: 4px solid #558ABB !important;
-}
-
 .syntaxhighlighter table tbody {
 /* 	padding: 10px 15px !important; */
 }
@@ -74,7 +91,7 @@ div.syntaxhighlighter {
 
 .syntaxhighlighter table {
 	width: 100% !important;
-	background: #fafafa url(../img/code-blueprint.png) repeat left top !important;
+	/*background: #fafafa url(../img/code-blueprint.png) repeat left top !important;*/
 	box-sizing: border-box !important;
 }
 
@@ -86,7 +103,7 @@ div.syntaxhighlighter {
 }
 
 .syntaxhighlighter table tbody tr{
-	margin: 10px 15px !important;
+	margin: 0 15px 10px 0 !important;
 	display: block;
 }
 .syntaxhighlighter table td.code {
@@ -281,11 +298,6 @@ div.syntaxhighlighter {
 .syntaxhighlighter.printing .break, 
 .syntaxhighlighter.printing .break a {
 	color: black !important;
-}
-
-.syntaxhighlighter {
-	background-color: white !important;
-	margin: 5px;
 }
 
 .syntaxhighlighter .line.alt1 {
