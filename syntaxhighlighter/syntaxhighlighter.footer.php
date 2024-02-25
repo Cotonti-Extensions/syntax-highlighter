@@ -38,7 +38,7 @@ function shlThemeCssUrl($chTheme = 'default')
 
 $shThemeUrl = shlThemeCssUrl($shTheme);
 $shCoreJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/syntaxhighlighter.js';
-$prepareJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/js/prepare.js';
+$startJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/js/start.js';
 
 $shAutoLinks = (bool) Cot::$cfg['plugin']['syntaxhighlighter']['autoLinks'];
 $shAutoLinks = $shAutoLinks ? 'true' : 'false';
@@ -71,10 +71,10 @@ if (codeBlocks.length > 0) {
         theme: '$shTheme',
         coreScript: '$shCoreJs'
     };
-    let prepareScript = document.createElement('script');
-    prepareScript.async = true;
-    prepareScript.src ='$prepareJs';
-    document.body.appendChild(prepareScript);
+    let startScript = document.createElement('script');
+    startScript.async = true;
+    startScript.src ='$startJs';
+    document.body.appendChild(startScript);
         
     syntaxhighlighterConfig = {
         autoLinks: {$shAutoLinks},
@@ -86,4 +86,3 @@ if (codeBlocks.length > 0) {
 }
 JS
 );
-
