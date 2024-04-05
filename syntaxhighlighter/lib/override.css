@@ -35,11 +35,14 @@
 .syntaxhighlighter-copy-to-clipboard:focus {
     background: no-repeat top / contain url('../img/copy-to-clipboard.svg');
     border: none;
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
     vertical-align: middle;
     opacity: .4;
     margin: 0 0 0 10px;
+    padding: 0;
+    box-sizing: border-box;
 }
 .syntaxhighlighter-copy-to-clipboard:hover {
     opacity: .8;
