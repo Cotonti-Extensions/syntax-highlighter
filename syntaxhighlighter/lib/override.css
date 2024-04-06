@@ -35,9 +35,9 @@
 .syntaxhighlighter-copy-to-clipboard:focus {
     background: no-repeat top / contain url('../img/copy-to-clipboard.svg');
     border: none;
-    width: 20px;
-    height: 20px;
-    min-height: 20px;
+    width: 18px;
+    height: 18px;
+    min-height: 10px;
     vertical-align: middle;
     opacity: .4;
     margin: 0 0 0 10px;
