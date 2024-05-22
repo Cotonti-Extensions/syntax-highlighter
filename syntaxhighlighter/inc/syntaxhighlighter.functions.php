@@ -8,9 +8,10 @@
 defined('COT_CODE') or die('Wrong URL');
 
 /**
-* Returns list of available color themes for Syntax highlighter
-*/
-function shlGetThemes() {
+ * @return list<string> List of available color themes for Syntax highlighter
+ */
+function shlGetThemes()
+{
 	$prefix = 'theme-';
 	$themes = [];
 	$filesDefault = glob(Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/' . $prefix . '*.css');
@@ -29,12 +30,13 @@ function shlGetThemes() {
 
 /**
 * Returns full path to theme css file
-* Allowing override it with user custom css file located in `themes/themename/styles` folder
+* Allowing override it with user custom css file located in `themes/<theme_name>/styles` folder
 *
 * @param string $chTheme Theme name (without prefix)
 * @return string Full path to theme css file
 */
-function shlThemeCssUrl($chTheme = 'default') {
+function shlThemeCssUrl($chTheme = 'default')
+{
 	$cssFile = Cot::$cfg['themes_dir'] . '/' . Cot::$cfg['defaulttheme'] . '/styles/syntaxhighlighter-' . $chTheme . '.css';
 	if (is_file($cssFile)) {
 		return $cssFile;

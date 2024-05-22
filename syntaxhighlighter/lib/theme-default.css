@@ -35,6 +35,12 @@
   min-height: inherit !important;
   min-height: auto !important; }
 
+.syntaxhighlighter-toolbar {
+  padding: 2px 4px 2px 4px;
+  border-bottom: #e5e5e5 1px solid;
+  background-color: white;
+}
+
 .syntaxhighlighter {
   width: 100% !important;
   margin: 1em 0 1em 0 !important;

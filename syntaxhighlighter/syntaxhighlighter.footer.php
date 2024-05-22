@@ -16,15 +16,22 @@ defined('COT_CODE') or die('Wrong URL');
 require_once cot_incfile('syntaxhighlighter', 'plug');
 
 $shTheme = !empty(Cot::$cfg['plugin']['syntaxhighlighter']['theme']) ? Cot::$cfg['plugin']['syntaxhighlighter']['theme'] : 'default';
+$shCommonStyles = Cot::$cfg['plugin']['syntaxhighlighter']['loadCommonCss'] ? 'plugins/syntaxhighlighter/lib/common.css' : '';
 
 /* === Hook === */
-foreach (cot_getextplugins('syntaxhighlighter.footer') as $pl)
-{
+foreach (cot_getextplugins('syntaxhighlighter.footer') as $pl) {
 	include $pl;
 }
 /* ===== */
 
 $shThemeUrl = shlThemeCssUrl($shTheme);
+
+$chCssFiles = [$shThemeUrl];
+if (!empty($shCommonStyles)) {
+    $chCssFiles[] = $shCommonStyles;
+}
+$chCssToLoad = "'" . implode("', '", $chCssFiles) . "'";
+
 $shCoreJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/syntaxhighlighter.js';
 $startJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/js/start.js';
 
@@ -47,7 +54,7 @@ Resources::embedFooter(<<<JS
 let codeBlocks = document.querySelectorAll('pre[class*="brush"]');
 if (codeBlocks.length > 0) {
     let head  = document.getElementsByTagName('head')[0];
-    ['{$shThemeUrl}', 'plugins/syntaxhighlighter/lib/override.css'].forEach((item) => {
+    [{$chCssToLoad}].forEach((item) => {
         let shLink = document.createElement('link');
         shLink.rel  = 'stylesheet';
         shLink.type = 'text/css';

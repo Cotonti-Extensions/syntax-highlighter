@@ -138,10 +138,10 @@ codeBlocks.forEach((codeBlock, currentIndex, listObj) => {
     }
     container.append(toolbar);
 
-    const clear = document.createElement('div');
-    clear.style.clear = 'both';
-    clear.style.height = '1px';
-    container.append(clear);
+    // const clear = document.createElement('div');
+    // clear.style.clear = 'both';
+    // clear.style.height = '1px';
+    //container.append(clear);
 
     const parent = codeBlock.parentNode;
     parent.replaceChild(container, codeBlock);

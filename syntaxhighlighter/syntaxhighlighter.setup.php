@@ -4,8 +4,8 @@
 Code=syntaxhighlighter
 Name=Syntax Highlighter
 Description=Client side code highlighter
-Version=1.3.1-4.0.1
-Date=2024-02-24
+Version=1.3.2-4.0.1
+Date=2024-05-22
 Author=Alex Gorbatchev https://github.com/alexgorbatchev, Vladimir Sibirov (Trustmaster), https://github.com/trustmaster, Alexey Kalnov https://github.com/Alex300
 Copyright=(c) Alex Gorbatchev, 2011-2015 Vladimir Sibirov,  2023 Lily Software https://lily-software.com
 Notes=
@@ -18,11 +18,12 @@ Lock_members=12345A
 
 [BEGIN_COT_EXT_CONFIG]
 theme=01:callback:shlGetThemes():default:Highlight color theme
-autoLinks=02:radio::1:Auto links
 className=03:string:::Code element class name
-gutter=04:radio::1:Gutter
-smartTabs=05:radio::1:Smart tabs
-tabSize=06:string::4:Tab size
+loadCommonCss=05:radio::1:Load common CSS
+autoLinks=07:radio::1:Auto links
+gutter=09:radio::1:Gutter
+smartTabs=11:radio::1:Smart tabs
+tabSize=13:string::4:Tab size
 [END_COT_EXT_CONFIG]
 ==================== */
 

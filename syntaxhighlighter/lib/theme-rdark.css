@@ -35,6 +35,15 @@
   min-height: inherit !important;
   min-height: auto !important; }
 
+.syntaxhighlighter-toolbar {
+  border-bottom: #b9bdb6 1px solid;
+  background-color: #1b2426;
+}
+.syntaxhighlighter-copy-to-clipboard {
+  background-color: #fff !important;
+  background-position: 2px center !important;
+}
+
 .syntaxhighlighter {
   width: 100% !important;
   margin: 1em 0 1em 0 !important;

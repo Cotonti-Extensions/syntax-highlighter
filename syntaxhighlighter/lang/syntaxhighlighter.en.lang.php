@@ -16,12 +16,15 @@ $L['info_desc'] = 'Client side code highlighter';
 $L['cfg_theme'] = 'Highlight color theme';
 $L['cfg_theme_hint'] = 'You can add your custom theme to: ' . Cot::$cfg['themes_dir'] . '/' . Cot::$cfg['defaulttheme']
     . '/styles/syntaxhighlighter-themeName.css';
-$L['cfg_autoLinks'] = 'Auto links';
-$L['cfg_autoLinks_hint'] = '(Default yes) - Allows you to turn detection of links in the highlighted element on and off. '
-    . 'If the option is turned off, URLs won’t be clickable';
 $L['cfg_className'] = 'Code element class name';
 $L['cfg_className_hint'] = '(Default empty) - Allows you to add a custom class (or multiple classes) to every highlighter element that will be'
     . ' created on the page';
+$L['cfg_loadCommonCss'] = 'Load common.css';
+$L['cfg_loadCommonCss_hint'] = '(Default yes) - Disable it if these styles are already in your theme. Leave it enabled if you are using one of '
+    . 'the default themes. See: plugins/syntaxhighlighter/lib/common.css';
+$L['cfg_autoLinks'] = 'Auto links';
+$L['cfg_autoLinks_hint'] = '(Default yes) - Allows you to turn detection of links in the highlighted element on and off. '
+    . 'If the option is turned off, URLs won’t be clickable';
 $L['cfg_gutter'] = 'Gutter';
 $L['cfg_gutter_hint'] = '(Default yes) - Allows you to turn gutter with line numbers on and off';
 $L['cfg_smartTabs'] = 'Smart tabs';
