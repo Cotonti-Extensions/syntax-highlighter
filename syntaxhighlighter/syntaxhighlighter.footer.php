@@ -13,28 +13,16 @@ Hooks=footer.first
 
 defined('COT_CODE') or die('Wrong URL');
 
+require_once cot_incfile('syntaxhighlighter', 'plug');
+
 $shTheme = !empty(Cot::$cfg['plugin']['syntaxhighlighter']['theme']) ? Cot::$cfg['plugin']['syntaxhighlighter']['theme'] : 'default';
 
-/**
- * Returns full path to theme css file
- * Allowing override it with user custom css file located in `themes/themename/styles` folder
- *
- * @param string $chTheme Theme name (without prefix)
- * @return string Full path to theme css file
- */
-function shlThemeCssUrl($chTheme = 'default')
+/* === Hook === */
+foreach (cot_getextplugins('syntaxhighlighter.footer') as $pl)
 {
-	$cssFile = Cot::$cfg['themes_dir'] . '/' . Cot::$cfg['defaulttheme'] . '/styles/syntaxhighlighter-' . $chTheme . '.css';
-	if (is_file($cssFile)) {
-        return $cssFile;
-    }
-
-    $cssFile = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/theme-' . $chTheme . '.css';
-	if (is_file($cssFile)) {
-        return $cssFile;
-    }
-	return Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/theme-default.css';
+	include $pl;
 }
+/* ===== */
 
 $shThemeUrl = shlThemeCssUrl($shTheme);
 $shCoreJs = Cot::$cfg['plugins_dir'] . '/syntaxhighlighter/lib/syntaxhighlighter.js';
@@ -65,8 +53,8 @@ if (codeBlocks.length > 0) {
         shLink.type = 'text/css';
         shLink.href = item;
         head.appendChild(shLink);
-    }); 
-    
+    });
+
     shPrepareConfig = {
         theme: '$shTheme',
         coreScript: '$shCoreJs'
@@ -75,7 +63,7 @@ if (codeBlocks.length > 0) {
     startScript.async = true;
     startScript.src ='$startJs';
     document.body.appendChild(startScript);
-        
+
     syntaxhighlighterConfig = {
         autoLinks: {$shAutoLinks},
         className: {$shClassName},
