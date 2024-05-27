@@ -7,7 +7,7 @@
 
 defined('COT_CODE') or die('Wrong URL.');
 
-$L['info_desc'] = 'Client side code highlighter';
+$L['info_desc'] = 'Подсветка синтаксиса на стороне клиента';
 
 /**
  * Plugin Config
